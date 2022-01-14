@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1370.0" style="-fx-background-color: beige;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Controller.MenuConsulterFacturesController">
+   <children>
+      <TableView fx:id="tvfacture" layoutX="462.0" layoutY="154.0" prefHeight="420.0" prefWidth="879.0">
+        <columns>
+          <TableColumn fx:id="colidf" prefWidth="134.0" text="IDF" />
+            <TableColumn fx:id="colido" prefWidth="108.0" text="IDO" />
+            <TableColumn fx:id="colcin" prefWidth="215.0" text="CIN" />
+            <TableColumn fx:id="colmontant" prefWidth="215.0" text="Montant" />
+            <TableColumn fx:id="coldate" prefWidth="215.0" text="Date" />
+        </columns>
+      </TableView>
+      <Label layoutX="653.0" layoutY="40.0" prefHeight="49.0" prefWidth="425.0" text="Liste des factures" textFill="#c61163">
+         <font>
+            <Font name="Algerian" size="43.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="700.0" prefWidth="416.0" style="-fx-background-color: black;">
+         <children>
+            <ImageView fitHeight="445.0" fitWidth="391.0" layoutX="-1.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Image/logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="back" layoutX="310.0" mnemonicParsing="false" onAction="#GoToPrincipal" style="-fx-background-color: transparent;" text="🏠" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Button>
+            <Button fx:id="btntache" layoutX="1.0" layoutY="2.0" mnemonicParsing="false" onAction="#gototache" prefHeight="79.0" prefWidth="95.0" style="-fx-background-color: transparent;" text="🔙" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="tfsearc" layoutX="493.0" layoutY="113.0" prefHeight="25.0" prefWidth="230.0" promptText="ID">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <Label layoutX="460.0" layoutY="108.0" style="-fx-background-color: transparent;" text="🔎">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
